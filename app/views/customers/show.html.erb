@@ -3,5 +3,6 @@
   <% @customer.items.each do |item| %>
       <p><%= item.name %></p>
   <% end %>
+    <h3>Total Price: $<%=@customer.total_price%></h3>
 
     <p>Supermarket: <%= @customer.supermarket.name %></p>
