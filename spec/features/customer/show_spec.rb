@@ -9,9 +9,9 @@ RSpec.describe 'the customer show page' do
     item_2 = Item.create!(name: "Potatoes", price: 10)
     item_3 = Item.create!(name: "Green Beans", price: 6)
     item_4 = Item.create!(name: "Salad", price: 4)
-    customer_item_1 = CustomerItem.create(item_id: item_1.id, customer_id: customer_1.id)
-    customer_item_1 = CustomerItem.create(item_id: item_2.id, customer_id: customer_1.id)
-    customer_item_1 = CustomerItem.create(item_id: item_3.id, customer_id: customer_1.id)
+    customer_item_1 = CustomerItem.create!(item_id: item_1.id, customer_id: customer_1.id)
+    customer_item_1 = CustomerItem.create!(item_id: item_2.id, customer_id: customer_1.id)
+    customer_item_1 = CustomerItem.create!(item_id: item_3.id, customer_id: customer_1.id)
 
     visit "customers/#{customer_1.id}"
 
@@ -31,9 +31,9 @@ RSpec.describe 'the customer show page' do
     item_2 = Item.create!(name: "Potatoes", price: 10)
     item_3 = Item.create!(name: "Green Beans", price: 6)
     item_4 = Item.create!(name: "Salad", price: 4)
-    customer_item_1 = CustomerItem.create(item_id: item_1.id, customer_id: customer_1.id)
-    customer_item_1 = CustomerItem.create(item_id: item_2.id, customer_id: customer_1.id)
-    customer_item_1 = CustomerItem.create(item_id: item_3.id, customer_id: customer_1.id)
+    customer_item_1 = CustomerItem.create!(item_id: item_1.id, customer_id: customer_1.id)
+    customer_item_1 = CustomerItem.create!(item_id: item_2.id, customer_id: customer_1.id)
+    customer_item_1 = CustomerItem.create!(item_id: item_3.id, customer_id: customer_1.id)
 
     visit "customers/#{customer_1.id}"
 
