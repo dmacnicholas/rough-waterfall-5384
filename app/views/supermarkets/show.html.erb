@@ -1,3 +1,9 @@
 <h1><%= @supermarket.name %></h1>
 
 <%= link_to "All Items", "/supermarkets/#{@supermarket.id}/items"%>
+
+<h3> Top 3 Items </h3>
+
+<% @supermarket.top_3_items.each do |item| %>
+  <%= item.name %>
+<% end %>

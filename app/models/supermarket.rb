@@ -6,4 +6,13 @@ class Supermarket < ApplicationRecord
   def unique_items
     items.distinct
   end
+
+  def top_3_items
+    items
+    .select('items.*, count(items.*) as customer_popularity')
+    .group(:id)
+    .order('customer_popularity desc')
+    .limit(3)
+
+  end
 end
