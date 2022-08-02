@@ -13,7 +13,7 @@ RSpec.describe 'the supermarket show page' do
     customer_item_1 = CustomerItem.create!(item_id: item_2.id, customer_id: customer_1.id)
     customer_item_1 = CustomerItem.create!(item_id: item_3.id, customer_id: customer_1.id)
 
-    visit "supermarket/#{supermarket_1.id}"
+    visit "supermarkets/#{supermarket_1.id}"
 
     expect(page).to have_content("Publix")
     expect(page).to have_link("All Items", href: "/supermarkets/#{supermarket_1.id}/items")
