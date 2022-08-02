@@ -35,7 +35,9 @@ RSpec.describe 'the customer show page' do
     customer_item_1 = CustomerItem.create(item_id: item_2.id, customer_id: customer_1.id)
     customer_item_1 = CustomerItem.create(item_id: item_3.id, customer_id: customer_1.id)
 
+    visit "customers/#{customer_1.id}"
+
     expect(page).to have_content("Total Price: $36")
     expect(page).to_not have_content("Total Price: $40")
-  end  
+  end
 end
